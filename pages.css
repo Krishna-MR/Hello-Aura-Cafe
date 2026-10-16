@@ -1,0 +1,671 @@
+/* ========================================
+   HELLO AURA CAFE - ADDITIONAL PAGE STYLES
+   Keep the existing nav.css file unchanged.
+======================================== */
+
+.page-container {
+    width: min(1120px, 86%);
+    margin: 0 auto;
+}
+
+.page-intro {
+    text-align: center;
+    padding: 70px 0 38px;
+}
+
+.page-kicker {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 14px;
+}
+
+.page-intro h1,
+.story-copy h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-green);
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 18px;
+}
+
+.page-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--muted);
+    font-size: 16px;
+}
+
+/* ========================================
+   LOGO IMAGE
+======================================== */
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    display: block;
+    width: 145px;
+    max-height: 75px;
+    object-fit: contain;
+}
+
+/* Fix the existing footer's unused fourth column
+   without editing nav.css. */
+
+.footer-main {
+    grid-template-columns: 1.2fr 0.9fr 1.3fr;
+}
+
+/* ========================================
+   SHARED PAGE BUTTON
+======================================== */
+
+.page-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 13px 25px;
+    border-radius: 40px;
+    background: var(--dark-green);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.page-button:hover {
+    background: #506b53;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   MENU: AUTOMATIC CSS CAROUSEL
+======================================== */
+
+.menu-carousel {
+    width: 100%;
+    overflow: hidden;
+    padding: 16px 0 38px;
+}
+
+.menu-track {
+    display: flex;
+    width: max-content;
+    animation: menuSlide 32s linear infinite;
+}
+
+.menu-set {
+    display: flex;
+    flex-shrink: 0;
+    gap: 22px;
+    padding-right: 22px;
+}
+
+.menu-carousel:hover .menu-track,
+.menu-carousel:focus-within .menu-track {
+    animation-play-state: paused;
+}
+
+.menu-card {
+    flex: 0 0 270px;
+    overflow: hidden;
+    background: var(--white);
+    border-radius: 16px;
+    border: 1px solid #e8e0d4;
+    box-shadow: 0 8px 25px #0000000a;
+}
+
+.menu-card img {
+    width: 100%;
+    height: 225px;
+    object-fit: cover;
+}
+
+.menu-card-content {
+    padding: 18px;
+}
+
+.menu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 21px;
+    color: var(--dark-green);
+    margin-bottom: 7px;
+}
+
+.menu-card p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.menu-price {
+    font-weight: 700;
+    color: var(--green);
+    font-size: 15px;
+}
+
+@keyframes menuSlide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* ========================================
+   MENU: ITEM LIST
+======================================== */
+
+.menu-list-section {
+    padding: 55px 0 75px;
+}
+
+.menu-section-heading {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.menu-section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 42px);
+    color: var(--dark-green);
+    margin-bottom: 10px;
+}
+
+.menu-section-heading p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.menu-list-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.menu-category {
+    padding: 25px;
+    background: #ffffff;
+    border: 1px solid #e8e0d4;
+    border-radius: 14px;
+}
+
+.menu-category h3 {
+    color: var(--dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    padding-bottom: 15px;
+    margin-bottom: 18px;
+    border-bottom: 1px solid #e8e0d4;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ded8cb;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item h4 {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 4px;
+}
+
+.menu-item p {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+.menu-item strong {
+    color: var(--green);
+    white-space: nowrap;
+    font-size: 14px;
+}
+
+/* ========================================
+   GALLERY & EVENTS: HERO
+======================================== */
+
+.gallery-hero {
+    position: relative;
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 70px 7%;
+    color: white;
+    background:
+        linear-gradient(#14251dcc, #14251d99),
+        url("https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1800&q=85")
+        center 55% / cover no-repeat;
+}
+
+.gallery-hero-content {
+    max-width: 700px;
+}
+
+.gallery-hero .page-kicker {
+    color: #e4d1ac;
+}
+
+.gallery-hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1.12;
+    margin-bottom: 18px;
+}
+
+.gallery-hero p {
+    max-width: 580px;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #f4efe5;
+}
+
+/* ========================================
+   GALLERY: PHOTO GRID
+======================================== */
+
+.gallery-section {
+    padding: 65px 0 80px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-auto-rows: 210px;
+    gap: 18px;
+}
+
+.gallery-card {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    margin: 0;
+    border-radius: 13px;
+    background: var(--light-green);
+}
+
+.gallery-card--large {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.gallery-card--wide {
+    grid-column: span 2;
+}
+
+.gallery-card img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.gallery-card:hover img {
+    transform: scale(1.06);
+}
+
+.gallery-card figcaption {
+    position: absolute;
+    inset: auto 0 0;
+    padding: 38px 18px 18px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    background: linear-gradient(transparent, #101810dc);
+}
+
+/* ========================================
+   EVENTS
+======================================== */
+
+.events-section {
+    background: var(--light-green);
+    padding: 70px 0 80px;
+}
+
+.events-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.event-card {
+    background: var(--white);
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px #0000000a;
+}
+
+.event-card img {
+    display: block;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.event-content {
+    padding: 24px;
+}
+
+.event-label {
+    color: var(--green);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.event-content h3 {
+    color: var(--dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.event-content p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ========================================
+   VISIT / LOCATION PAGE
+======================================== */
+
+.visit-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: stretch;
+    padding-bottom: 80px;
+}
+
+.visit-details {
+    padding: 34px;
+    border-radius: 16px;
+    background: var(--light-green);
+}
+
+.visit-details h2 {
+    color: var(--dark-green);
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    margin-bottom: 25px;
+}
+
+.visit-detail {
+    padding: 17px 0;
+    border-bottom: 1px solid #c9cdbd;
+}
+
+.visit-detail:last-of-type {
+    border-bottom: none;
+}
+
+.visit-detail h3 {
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--dark-green);
+}
+
+.visit-detail p {
+    font-size: 14px;
+    color: var(--muted);
+    overflow-wrap: anywhere;
+}
+
+.visit-map {
+    min-height: 430px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--light-green);
+}
+
+.visit-map iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    border: 0;
+}
+
+.visit-note {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 18px;
+}
+
+/* ========================================
+   HOME: OUR STORY SECTION
+======================================== */
+
+.story-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    padding: 80px 7%;
+    background: var(--cream);
+}
+
+.story-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 150px 150px 10px 10px;
+}
+
+.story-copy {
+    max-width: 530px;
+}
+
+.story-copy .page-kicker {
+    margin-bottom: 17px;
+}
+
+.story-copy h2 {
+    font-size: clamp(34px, 4vw, 48px);
+}
+
+.story-copy p {
+    color: var(--muted);
+    font-size: 15px;
+    margin-bottom: 18px;
+}
+
+/* ========================================
+   COMMON INVITATION SECTION
+======================================== */
+
+.visit-invitation {
+    padding: 55px 7%;
+    text-align: center;
+    background: var(--cream);
+}
+
+.visit-invitation h2 {
+    font-family: 'Playfair Display', serif;
+    color: var(--dark-green);
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 12px;
+}
+
+.visit-invitation p {
+    color: var(--muted);
+    margin-bottom: 24px;
+}
+
+/* ========================================
+   RESPONSIVE DESIGN
+======================================== */
+
+@media (max-width: 1000px) {
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .menu-list-grid,
+    .events-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .gallery-card--large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 22px;
+    }
+
+    .story-section {
+        gap: 32px;
+    }
+}
+
+@media (max-width: 650px) {
+    .page-container {
+        width: 90%;
+    }
+
+    .navbar .logo img {
+        width: 118px;
+        max-height: 60px;
+    }
+
+    .page-intro {
+        padding: 48px 0 28px;
+    }
+
+    .page-description {
+        font-size: 14px;
+    }
+
+    .menu-card {
+        flex-basis: 235px;
+    }
+
+    .menu-card img {
+        height: 190px;
+    }
+
+    .menu-set {
+        gap: 15px;
+        padding-right: 15px;
+    }
+
+    .menu-list-grid,
+    .events-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-category {
+        padding: 20px;
+    }
+
+    .gallery-hero {
+        min-height: 320px;
+        padding: 55px 6%;
+    }
+
+    .gallery-hero p {
+        font-size: 14px;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 160px;
+        gap: 10px;
+    }
+
+    .gallery-card--large {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .gallery-card--wide {
+        grid-column: span 2;
+    }
+
+    .gallery-card figcaption {
+        padding: 28px 10px 12px;
+        font-size: 16px;
+    }
+
+    .events-section,
+    .gallery-section,
+    .menu-list-section {
+        padding-top: 45px;
+        padding-bottom: 50px;
+    }
+
+    .visit-grid {
+        grid-template-columns: 1fr;
+        padding-bottom: 50px;
+    }
+
+    .visit-details {
+        padding: 24px;
+    }
+
+    .visit-map,
+    .visit-map iframe {
+        min-height: 320px;
+    }
+
+    .story-section {
+        grid-template-columns: 1fr;
+        padding: 50px 6%;
+        gap: 28px;
+    }
+
+    .story-image img {
+        height: 300px;
+        border-radius: 100px 100px 10px 10px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Let visitors with reduced-motion preferences
+   scroll through the items without animation. */
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-carousel {
+        overflow-x: auto;
+    }
+
+    .menu-track {
+        animation: none;
+    }
+
+    .gallery-card img {
+        transition: none;
+    }
+}
