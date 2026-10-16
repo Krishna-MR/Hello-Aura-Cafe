@@ -1,0 +1,593 @@
+
+/* =====================================
+   HELLO ORA CAFE - MAIN STYLESHEET
+===================================== */
+
+:root {
+    --cream: #f8f4eb;
+    --dark-green: #26392d;
+    --green: #344b39;
+    --light-green: #e9eadb;
+    --text: #282d27;
+    --muted: #74766c;
+    --white: #ffffff;
+    --gold: #c5a477;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* =====================================
+   NAVIGATION BAR
+===================================== */
+
+.navbar {
+    min-height: 100px;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    background: var(--cream);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #e8e0d4;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-style: italic;
+    font-weight: 700;
+    color: var(--dark-green);
+    line-height: 1.1;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: var(--green);
+}
+
+.logo small {
+    display: block;
+    text-align: center;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-size: 10px;
+    letter-spacing: 7px;
+    margin-top: 7px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--green);
+}
+
+.nav-links a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--green);
+}
+
+.nav-button,
+.primary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 14px 26px;
+    border-radius: 40px;
+    background: var(--dark-green);
+    color: var(--white);
+    font-size: 14px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-button:hover,
+.primary-button:hover {
+    background: #506b53;
+    transform: translateY(-2px);
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero {
+    min-height: 550px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 60px 7%;
+    background: var(--cream);
+}
+
+.hero-content {
+    max-width: 570px;
+}
+
+.eyebrow {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(45px, 5.5vw, 76px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -2px;
+    color: #19271e;
+    margin-bottom: 24px;
+}
+
+.hero h1 span {
+    color: #71866d;
+    font-style: italic;
+}
+
+.hero-description {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 410px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.text-button {
+    font-size: 14px;
+    font-weight: 700;
+    transition: color 0.3s ease;
+}
+
+.text-button:hover {
+    color: #71866d;
+}
+
+/* Hero image */
+
+.hero-image {
+    position: relative;
+    width: 100%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    border-radius: 180px 180px 8px 8px;
+}
+
+.image-note {
+    position: absolute;
+    left: -25px;
+    bottom: 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--white);
+    padding: 16px 22px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px #00000012;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.image-note i {
+    font-size: 24px;
+    color: var(--green);
+}
+
+/* =====================================
+   CAFE FEATURES STRIP
+===================================== */
+
+.welcome-strip {
+    padding: 35px 7%;
+    background: var(--light-green);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    gap: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    border-right: 1px solid #c9cdbd;
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature i {
+    font-size: 30px;
+    color: var(--dark-green);
+}
+
+.feature h3 {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.feature p {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+.footer {
+    background: var(--dark-green);
+    color: var(--cream);
+    padding: 55px 7% 22px;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.2fr 0.9fr 1.3fr 0.7fr;
+    gap: 45px;
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    display: inline-block;
+    color: var(--cream);
+    margin-bottom: 22px;
+}
+
+.footer-brand > p {
+    max-width: 260px;
+    font-size: 14px;
+    color: #d0d7cc;
+    margin-bottom: 20px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.footer-column h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+
+.footer-column a,
+.footer-column p {
+    font-size: 13px;
+    color: #d0d7cc;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: var(--gold);
+}
+
+.footer-column p i {
+    color: var(--gold);
+    margin-right: 8px;
+}
+
+/* =====================================
+   SOCIAL MEDIA ICONS
+===================================== */
+
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 18px;
+}
+
+.social-links a {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #879285;
+    border-radius: 50%;
+    color: var(--cream);
+    font-size: 17px;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--cream);
+    color: var(--dark-green);
+    transform: translateY(-4px);
+}
+
+/* Footer decorative text */
+
+.footer-note {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    font-style: italic;
+    text-align: center;
+    color: #d8d8bd;
+    align-self: center;
+}
+
+/* =====================================
+   FOOTER BOTTOM
+===================================== */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 22px;
+    border-top: 1px solid #536254;
+    font-size: 12px;
+    color: #d0d7cc;
+}
+
+.footer-bottom span {
+    color: #e5b77f;
+}
+
+/* =====================================
+   FLOATING WHATSAPP BUTTON
+===================================== */
+
+.whatsapp-float {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #25d366;
+    color: white;
+    font-size: 34px;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px #00000030;
+    z-index: 2000;
+    transition: transform 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+}
+
+/* =====================================
+   TABLET RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 1000px) {
+    .navbar {
+        padding: 18px 4%;
+        gap: 18px;
+    }
+
+    .nav-links {
+        gap: 20px;
+    }
+
+    .hero {
+        padding: 50px 5%;
+        gap: 30px;
+    }
+
+    .hero-image img {
+        height: 390px;
+    }
+
+    .welcome-strip {
+        padding: 25px 4%;
+    }
+
+    .feature {
+        gap: 10px;
+    }
+
+    .footer-main {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 35px;
+    }
+}
+
+/* =====================================
+   MOBILE RESPONSIVE DESIGN
+===================================== */
+
+@media (max-width: 650px) {
+    .navbar {
+        padding: 18px 5%;
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        font-size: 28px;
+    }
+
+    .nav-button {
+        padding: 11px 16px;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .nav-links a.active::after {
+        bottom: -6px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 45px 6%;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -1px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        height: 350px;
+        border-radius: 130px 130px 8px 8px;
+    }
+
+    .image-note {
+        left: -5px;
+        bottom: 15px;
+        padding: 12px;
+    }
+
+    .welcome-strip {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+
+    .feature {
+        justify-content: flex-start;
+        border-right: none;
+    }
+
+    .feature i {
+        font-size: 24px;
+    }
+
+    .feature h3 {
+        font-size: 12px;
+    }
+
+    .feature p {
+        font-size: 11px;
+    }
+
+    .footer {
+        padding: 40px 6% 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .footer-note {
+        text-align: left;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        right: 16px;
+        bottom: 16px;
+        font-size: 30px;
+    }
+}
+
+/* =====================================
+   SMALL MOBILE SCREENS
+===================================== */
+
+@media (max-width: 380px) {
+    .nav-links {
+        gap: 13px;
+    }
+
+    .nav-button {
+        padding: 10px 12px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .welcome-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        padding: 8px 0;
+    }
+}
