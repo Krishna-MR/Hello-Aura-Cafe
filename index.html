@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Hello Aura Cafe | Coffee & Good Vibes</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Navigation and Home CSS -->
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="order.css">
+    <link rel="stylesheet" href="pages.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+
+    <!-- Shared Navigation -->
+    <div id="navbar"></div>
+
+    <!-- Moving Offers -->
+    <div class="offers-bar">
+        <div class="offers-track">
+            <span>☕ FRESH COFFEE, GOOD MOOD</span>
+            <span>♡ YOUR DAILY DOSE OF HAPPINESS</span>
+            <span>🥐 COFFEE & FRESH BITES</span>
+            <span>✦ YOUR FAVOURITE CAFE CORNER</span>
+
+            <span aria-hidden="true">☕ FRESH COFFEE, GOOD MOOD</span>
+            <span aria-hidden="true">♡ YOUR DAILY DOSE OF HAPPINESS</span>
+            <span aria-hidden="true">🥐 COFFEE & FRESH BITES</span>
+            <span aria-hidden="true">✦ YOUR FAVOURITE CAFE CORNER</span>
+        </div>
+    </div>
+
+    <!-- Hero Image Slider -->
+    <section class="hero-slider">
+
+        <div class="hero-slide slide-one active">
+            <div class="hero-content">
+                <span class="hero-label">Welcome to Hello Aura</span>
+                <h1>Every Cup Has a Little Magic</h1>
+                <p>Freshly brewed coffee, delicious bites and a cosy corner to make your everyday moments special.</p>
+                <a href="menu.html" class="hero-btn">Explore Our Menu <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-slide slide-two">
+            <div class="hero-content">
+                <span class="hero-label">Made With Love</span>
+                <h1>Your Happy Place for Coffee</h1>
+                <p>Take a break, catch up with friends and enjoy the simple pleasure of a really good cup of coffee.</p>
+                <a href="about.html" class="hero-btn">Discover Our Story <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <div class="hero-slide slide-three">
+            <div class="hero-content">
+                <span class="hero-label">Coffee. Comfort. Connection.</span>
+                <h1>Make Every Moment Delicious</h1>
+                <p>From your morning coffee to an evening treat, there's always a reason to visit Hello Aura Cafe.</p>
+                <a href="contact.html" class="hero-btn">Come Visit Us <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+
+        <button class="slider-arrow prev" type="button" aria-label="Previous slide">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+
+        <button class="slider-arrow next" type="button" aria-label="Next slide">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+
+        <div class="slider-dots">
+            <button class="slider-dot active" type="button" aria-label="Slide 1"></button>
+            <button class="slider-dot" type="button" aria-label="Slide 2"></button>
+            <button class="slider-dot" type="button" aria-label="Slide 3"></button>
+        </div>
+
+    </section>
+
+    <!-- Welcome Section -->
+    <section class="welcome-section">
+
+        <div class="welcome-image">
+            <img
+                src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1000&q=85"
+                alt="Warm and welcoming cafe interior"
+                loading="lazy">
+        </div>
+
+        <div class="welcome-text">
+            <span class="section-label">A Little About Us</span>
+            <h2>A Cosy Corner for Your Everyday Moments</h2>
+
+            <p>
+                At Hello Aura Cafe, we believe that a great cafe is more than
+                just coffee. It's laughter shared with friends, peaceful
+                moments alone and the comfort of your favourite drink.
+            </p>
+
+            <p>
+                Drop by for a fresh brew, a tasty treat and a warm welcome.
+                We can't wait to see you!
+            </p>
+
+            <a href="about.html" class="text-link">
+                Get to Know Us <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </section>
+
+    <!-- Popular Menu -->
+    <section class="menu-section">
+
+        <div class="section-heading">
+            <span class="section-label">Made Fresh for You</span>
+            <h2>Something You'll Love</h2>
+            <p>Discover our cafe favourites, perfect for every craving and every coffee break.</p>
+        </div>
+
+        <div class="menu-grid">
+
+            <article class="menu-card">
+                <img
+                    src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85"
+                    alt="Iced coffee"
+                    loading="lazy">
+
+                <div class="menu-card-content">
+                    <h3>Signature Coffee</h3>
+                    <p>Rich aroma, smooth flavours and a little happiness in every sip.</p>
+                    <a href="menu.html">EXPLORE MENU <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <img
+                    src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85"
+                    alt="Fresh bakery items"
+                    loading="lazy">
+
+                <div class="menu-card-content">
+                    <h3>Fresh Bakery</h3>
+                    <p>Delicious baked treats to make your coffee break even better.</p>
+                    <a href="menu.html">EXPLORE MENU <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="menu-card">
+                <img
+                    src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=800&q=85"
+                    alt="Sweet dessert"
+                    loading="lazy">
+
+                <div class="menu-card-content">
+                    <h3>Sweet Treats</h3>
+                    <p>Give yourself a little something sweet, because you deserve it.</p>
+                    <a href="menu.html">EXPLORE MENU <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+        </div>
+
+    </section>
+
+    <!-- Promotional Banner -->
+    <section class="promo-banner">
+        <span class="section-label">Your Next Coffee Break</span>
+        <h2>Good Days Start With Good Coffee</h2>
+        <p>Bring your friends, find your favourite seat and make yourself at home.</p>
+        <a href="menu.html" class="hero-btn">See Our Menu <i class="fas fa-arrow-right"></i></a>
+    </section>
+
+    <!-- Visit Us -->
+    <section class="visit-section">
+        <span class="section-label">We'd Love to See You</span>
+        <h2>Your Table Is Waiting</h2>
+        <p>Looking for your next favourite cafe? Come say hello at Hello Aura Cafe.</p>
+        <a href="contact.html" class="visit-btn">Contact Us <i class="fas fa-arrow-right"></i></a>
+    </section>
+
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+
+    <!-- Shared HTML Loader -->
+    <script src="navbar.js"></script>
+
+    <!-- Home Page Slider -->
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const slides = document.querySelectorAll(".hero-slide");
+            const dots = document.querySelectorAll(".slider-dot");
+            const previousButton = document.querySelector(".slider-arrow.prev");
+            const nextButton = document.querySelector(".slider-arrow.next");
+            const slider = document.querySelector(".hero-slider");
+
+            if (!slides.length || !previousButton || !nextButton || !slider) {
+                return;
+            }
+
+            const SLIDE_DELAY = 5000; // 5 seconds (in milliseconds)
+
+            let currentSlide = 0;
+            let slideTimer;
+
+            function showSlide(index) {
+                currentSlide = (index + slides.length) % slides.length;
+
+                slides.forEach((slide, i) => {
+                    slide.classList.toggle("active", i === currentSlide);
+                });
+
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle("active", i === currentSlide);
+                });
+            }
+
+            function nextSlide() {
+                showSlide(currentSlide + 1);
+            }
+
+            function previousSlide() {
+                showSlide(currentSlide - 1);
+            }
+
+            function startSlider() {
+                clearInterval(slideTimer);
+                slideTimer = setInterval(nextSlide, SLIDE_DELAY);
+            }
+
+            function stopSlider() {
+                clearInterval(slideTimer);
+            }
+
+            nextButton.addEventListener("click", function () {
+                nextSlide();
+                startSlider();
+            });
+
+            previousButton.addEventListener("click", function () {
+                previousSlide();
+                startSlider();
+            });
+
+            dots.forEach((dot, index) => {
+                dot.addEventListener("click", function () {
+                    showSlide(index);
+                    startSlider();
+                });
+            });
+
+            // Pause while the mouse is over the slider, resume when it leaves
+            slider.addEventListener("mouseenter", stopSlider);
+            slider.addEventListener("mouseleave", startSlider);
+
+            startSlider();
+        });
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order your favourite coffee, bakery treats and desserts from Hello Aura Cafe.">
+  <title>Order Now | Hello Aura Cafe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="order.css">
+  <link rel="stylesheet" href="pages.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+<div id="navbar"></div>
+    <section class="order-hero">
+      <div class="order-hero-inner">
+        <span class="eyebrow"><i class="fa-solid fa-mug-hot"></i> FRESHLY MADE, JUST FOR YOU</span>
+        <h1>Your favourites,<br><em>on their way.</em></h1>
+        <p>Pick a little something delicious and make your day feel brighter.</p>
+        <a class="hero-link" href="#order-menu">Start your order <i class="fa-solid fa-arrow-down"></i></a>
+      </div>
+      <div class="hero-photo" role="img" aria-label="Coffee and pastries on a cafe table"></div>
+      <div class="hero-stamp"><i class="fa-solid fa-heart"></i><span>Made with<br>love & care</span></div>
+    </section>
+
+    <section class="order-layout" id="order-menu">
+      <div class="menu-area">
+        <div class="section-heading">
+          <span class="eyebrow">THE HELLO AURA MENU</span>
+          <h2>What are you craving?</h2>
+          <p>Choose your treats below and add them to your bag.</p>
+        </div>
+        <div class="category-tabs" role="group" aria-label="Filter menu items">
+          <button class="category-tab active" type="button" data-category="all">All items</button>
+          <button class="category-tab" type="button" data-category="coffee"><i class="fa-solid fa-mug-hot"></i> Coffee</button>
+          <button class="category-tab" type="button" data-category="bites"><i class="fa-solid fa-bread-slice"></i> Bakery & bites</button>
+          <button class="category-tab" type="button" data-category="sweet"><i class="fa-solid fa-cookie-bite"></i> Sweet treats</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+          <article class="product-card" data-category="coffee" data-id="cappuccino" data-name="Classic Cappuccino" data-price="150">
+            <div class="product-image image-coffee"><img src="https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=700&q=85" alt="Cappuccino with milk foam" loading="lazy"><span class="product-tag">Cafe favourite</span></div>
+            <div class="product-info"><div class="product-title-row"><h3>Classic Cappuccino</h3><strong>₹150</strong></div><p>Espresso, steamed milk and silky foam.</p><button class="add-button" type="button" data-add="cappuccino"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+          <article class="product-card" data-category="coffee" data-id="iced-latte" data-name="Iced Vanilla Latte" data-price="180">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=700&q=85" alt="Iced latte in a glass" loading="lazy"></div>
+            <div class="product-info"><div class="product-title-row"><h3>Iced Vanilla Latte</h3><strong>₹180</strong></div><p>Chilled espresso, creamy milk and vanilla.</p><button class="add-button" type="button" data-add="iced-latte"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+          <article class="product-card" data-category="coffee" data-id="mocha" data-name="Chocolate Mocha" data-price="190">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1578314675249-a6910f80cc4e?auto=format&fit=crop&w=700&q=85" alt="Chocolate mocha coffee" loading="lazy"></div>
+            <div class="product-info"><div class="product-title-row"><h3>Chocolate Mocha</h3><strong>₹190</strong></div><p>A comforting blend of coffee and chocolate.</p><button class="add-button" type="button" data-add="mocha"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+          <article class="product-card" data-category="bites" data-id="croissant" data-name="Butter Croissant" data-price="120">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=700&q=85" alt="Golden freshly baked croissants" loading="lazy"></div>
+            <div class="product-info"><div class="product-title-row"><h3>Butter Croissant</h3><strong>₹120</strong></div><p>Flaky, golden and baked until lovely and crisp.</p><button class="add-button" type="button" data-add="croissant"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+          <article class="product-card" data-category="bites" data-id="sandwich" data-name="Grilled Veg Sandwich" data-price="170">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=700&q=85" alt="Grilled sandwich with fresh vegetables" loading="lazy"></div>
+            <div class="product-info"><div class="product-title-row"><h3>Grilled Veg Sandwich</h3><strong>₹170</strong></div><p>Toasted bread with a fresh, savoury filling.</p><button class="add-button" type="button" data-add="sandwich"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+          <article class="product-card" data-category="sweet" data-id="cheesecake" data-name="Classic Cheesecake" data-price="210">
+            <div class="product-image"><img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=700&q=85" alt="Slice of cheesecake" loading="lazy"></div>
+            <div class="product-info"><div class="product-title-row"><h3>Classic Cheesecake</h3><strong>₹210</strong></div><p>Rich, creamy and just the right amount of sweet.</p><button class="add-button" type="button" data-add="cheesecake"><i class="fa-solid fa-plus"></i> Add to order</button></div>
+          </article>
+        </div>
+      </div>
+
+      <aside class="cart-panel" aria-labelledby="cart-title">
+        <div class="cart-heading"><div><span class="eyebrow">YOUR SELECTION</span><h2 id="cart-title">Your order <span id="cart-count">0</span></h2></div><i class="fa-solid fa-bag-shopping"></i></div>
+        <div class="cart-items" id="cart-items"><div class="empty-cart"><i class="fa-solid fa-mug-hot"></i><h3>Your bag is waiting</h3><p>Add a drink or treat to get started.</p></div></div>
+        <div class="cart-total"><span>Subtotal</span><strong id="cart-total">₹0</strong></div>
+        <p class="cart-note"><i class="fa-solid fa-circle-info"></i> Delivery or pickup details are collected at checkout.</p>
+        <button class="checkout-button" type="button" id="checkout-button" disabled>Continue to checkout <i class="fa-solid fa-arrow-right"></i></button>
+        <p class="demo-note">Online payment and order submission are not connected yet.</p>
+      </aside>
+    </section>
+
+    <section class="checkout-section" id="checkout-section" hidden>
+      <div class="checkout-intro"><span class="eyebrow">ALMOST THERE</span><h2>Where should we prepare your order?</h2><p>Fill in your details and review your order. This demo will not send an order to the cafe.</p></div>
+      <form id="checkout-form" class="checkout-form">
+        <label>Full name<input name="customerName" autocomplete="name" required placeholder="Your name"></label>
+        <label>Phone number<input name="phone" type="tel" autocomplete="tel" required pattern="[0-9+() -]{7,18}" placeholder="Your contact number"></label>
+        <fieldset><legend>How would you like your order?</legend><label class="choice"><input type="radio" name="fulfilment" value="Pickup" checked> <span><i class="fa-solid fa-shop"></i> Pickup</span></label><label class="choice"><input type="radio" name="fulfilment" value="Delivery"> <span><i class="fa-solid fa-motorcycle"></i> Delivery</span></label></fieldset>
+        <label id="address-field" hidden>Delivery address<textarea name="address" rows="3" placeholder="House / street / area"></textarea></label>
+        <label>Notes for the cafe (optional)<textarea name="notes" rows="2" placeholder="Any special requests?"></textarea></label>
+        <div class="checkout-actions"><button class="back-button" type="button" id="back-to-menu">Back to menu</button><button class="checkout-button" type="submit">Review order <i class="fa-solid fa-arrow-right"></i></button></div>
+        <p id="order-message" class="order-message" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <!-- Shared Footer -->
+    <div id="footer"></div>
+    <!-- Shared HTML Loader -->
+    <script src="navbar.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      const cart = new Map();
+      const productCards = [...document.querySelectorAll('.product-card')];
+      const cartItems = document.getElementById('cart-items');
+      const cartCount = document.getElementById('cart-count');
+      const cartTotal = document.getElementById('cart-total');
+      const checkoutButton = document.getElementById('checkout-button');
+      const checkoutSection = document.getElementById('checkout-section');
+      const checkoutForm = document.getElementById('checkout-form');
+      const addressField = document.getElementById('address-field');
+      const orderMessage = document.getElementById('order-message');
+      const money = value => '₹' + value.toLocaleString('en-IN');
+
+      function renderCart() {
+        const items = [...cart.values()];
+        const count = items.reduce((sum, item) => sum + item.quantity, 0);
+        const total = items.reduce((sum, item) => sum + item.price * item.quantity, 0);
+        cartCount.textContent = count;
+        cartTotal.textContent = money(total);
+        checkoutButton.disabled = count === 0;
+        if (!items.length) {
+          cartItems.innerHTML = '<div class="empty-cart"><i class="fa-solid fa-mug-hot"></i><h3>Your bag is waiting</h3><p>Add a drink or treat to get started.</p></div>';
+          return;
+        }
+        cartItems.innerHTML = items.map(item => `<div class="cart-item"><div class="cart-item-copy"><strong>${item.name}</strong><span>${money(item.price)} each</span></div><div class="quantity-controls"><button type="button" data-change="${item.id}" data-delta="-1" aria-label="Remove one ${item.name}">−</button><span>${item.quantity}</span><button type="button" data-change="${item.id}" data-delta="1" aria-label="Add one ${item.name}">+</button></div><strong class="line-total">${money(item.price * item.quantity)}</strong></div>`).join('');
+      }
+
+      document.querySelectorAll('[data-add]').forEach(button => button.addEventListener('click', () => {
+        const card = productCards.find(item => item.dataset.id === button.dataset.add);
+        if (!card) return;
+        const id = card.dataset.id;
+        const existing = cart.get(id);
+        cart.set(id, { id, name: card.dataset.name, price: Number(card.dataset.price), quantity: existing ? existing.quantity + 1 : 1 });
+        renderCart();
+        button.innerHTML = '<i class="fa-solid fa-check"></i> Added';
+        window.setTimeout(() => { button.innerHTML = '<i class="fa-solid fa-plus"></i> Add to order'; }, 900);
+      }));
+
+      cartItems.addEventListener('click', event => {
+        const button = event.target.closest('[data-change]');
+        if (!button) return;
+        const item = cart.get(button.dataset.change);
+        if (!item) return;
+        item.quantity += Number(button.dataset.delta);
+        if (item.quantity <= 0) cart.delete(item.id);
+        renderCart();
+      });
+
+      document.querySelectorAll('.category-tab').forEach(button => button.addEventListener('click', () => {
+        document.querySelectorAll('.category-tab').forEach(tab => tab.classList.toggle('active', tab === button));
+        productCards.forEach(card => { card.hidden = button.dataset.category !== 'all' && card.dataset.category !== button.dataset.category; });
+      }));
+
+      checkoutButton.addEventListener('click', () => {
+        checkoutSection.hidden = false;
+        checkoutSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      document.getElementById('back-to-menu').addEventListener('click', () => {
+        checkoutSection.hidden = true;
+        document.getElementById('order-menu').scrollIntoView({ behavior: 'smooth' });
+      });
+      checkoutForm.querySelectorAll('input[name="fulfilment"]').forEach(input => input.addEventListener('change', () => {
+        const delivery = checkoutForm.elements.fulfilment.value === 'Delivery';
+        addressField.hidden = !delivery;
+        addressField.querySelector('textarea').required = delivery;
+      }));
+      checkoutForm.addEventListener('submit', event => {
+        event.preventDefault();
+        if (!cart.size) return;
+        const data = new FormData(checkoutForm);
+        const summary = [...cart.values()].map(item => `${item.quantity} × ${item.name}`).join(', ');
+        orderMessage.textContent = `Demo order prepared for ${data.get('customerName')}: ${summary}. Total ${cartTotal.textContent}. No order has been sent or payment taken.`;
+        orderMessage.classList.add('visible');
+      });
+
+      renderCart();
+    });
+  </script>
+</body>
+</html>

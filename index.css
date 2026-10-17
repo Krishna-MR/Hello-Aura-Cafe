@@ -1,0 +1,435 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    color: #263d30;
+    background: #fffdf8;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Moving Offers */
+.offers-bar {
+    background: #244332;
+    color: #fff;
+    overflow: hidden;
+    padding: 12px 0;
+    white-space: nowrap;
+}
+
+.offers-track {
+    display: flex;
+    width: max-content;
+    animation: moveOffers 28s linear infinite;
+}
+
+.offers-track span {
+    padding: 0 35px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.offers-track i {
+    color: #e6c78b;
+    margin-right: 8px;
+}
+
+@keyframes moveOffers {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+/* Hero Slider */
+.hero-slider {
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background: #25372b;
+}
+
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    padding: 60px 10%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+
+.hero-slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hero-slide::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        90deg,
+        rgba(13, 29, 19, 0.82),
+        rgba(13, 29, 19, 0.45),
+        rgba(13, 29, 19, 0.05)
+    );
+}
+
+.slide-one {
+    background-image: url("https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=1800&q=85");
+}
+
+.slide-two {
+    background-image: url("https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=1800&q=85");
+}
+
+.slide-three {
+    background-image: url("https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=1800&q=85");
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    max-width: 650px;
+}
+
+.hero-label {
+    display: inline-block;
+    color: #f2d7a0;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.12;
+    margin-bottom: 22px;
+}
+
+.hero-content p {
+    max-width: 480px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #f0f0e9;
+    margin-bottom: 30px;
+}
+
+.hero-btn {
+    display: inline-block;
+    padding: 15px 28px;
+    background: #e8cb91;
+    color: #213b2b;
+    font-size: 14px;
+    font-weight: 700;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.hero-btn:hover {
+    background: #fff;
+    transform: translateY(-2px);
+}
+
+.slider-arrow {
+    position: absolute;
+    z-index: 5;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border: 1px solid rgba(255, 255, 255, 0.65);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.slider-arrow:hover {
+    background: #e8cb91;
+    color: #213b2b;
+}
+
+.prev {
+    left: 25px;
+}
+
+.next {
+    right: 25px;
+}
+
+.slider-dots {
+    position: absolute;
+    z-index: 5;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    width: 28px;
+    border-radius: 10px;
+    background: #e8cb91;
+}
+
+/* Welcome Section */
+.welcome-section {
+    padding: 85px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.welcome-image img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.section-label {
+    display: block;
+    color: #a77a42;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.welcome-text h2,
+.section-heading h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 46px);
+    line-height: 1.25;
+    margin-bottom: 22px;
+}
+
+.welcome-text p {
+    color: #687369;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.text-link {
+    color: #244332;
+    font-weight: 700;
+    border-bottom: 1px solid #a77a42;
+    padding-bottom: 5px;
+}
+
+/* Popular Menu */
+.menu-section {
+    padding: 80px 8%;
+    background: #f5f2e9;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 45px;
+}
+
+.section-heading p {
+    color: #687369;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.menu-card {
+    background: #fff;
+    border-radius: 7px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(35, 54, 39, 0.12);
+}
+
+.menu-card img {
+    display: block;
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.menu-card-content {
+    padding: 24px;
+}
+
+.menu-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    margin-bottom: 10px;
+}
+
+.menu-card p {
+    color: #687369;
+    font-size: 14px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.menu-card a {
+    color: #244332;
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Promotion Banner */
+.promo-banner {
+    padding: 75px 8%;
+    text-align: center;
+    color: #fff;
+    background:
+        linear-gradient(rgba(25, 51, 35, 0.83), rgba(25, 51, 35, 0.83)),
+        url("https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1800&q=85") center/cover;
+}
+
+.promo-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 15px;
+}
+
+.promo-banner p {
+    color: #eee9dc;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+/* Visit Us */
+.visit-section {
+    text-align: center;
+    padding: 80px 8%;
+}
+
+.visit-section h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(30px, 4vw, 42px);
+    margin-bottom: 18px;
+}
+
+.visit-section p {
+    color: #687369;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+.visit-btn {
+    display: inline-block;
+    background: #244332;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.visit-btn:hover {
+    background: #385b43;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-slider {
+        height: 520px;
+    }
+
+    .hero-slide {
+        padding: 50px 8%;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .slider-arrow {
+        width: 36px;
+        height: 36px;
+    }
+
+    .prev {
+        left: 10px;
+    }
+
+    .next {
+        right: 10px;
+    }
+
+    .welcome-section {
+        grid-template-columns: 1fr;
+        padding: 55px 6%;
+        gap: 30px;
+    }
+
+    .welcome-image img {
+        height: 320px;
+    }
+
+    .menu-section {
+        padding: 60px 6%;
+    }
+
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .menu-card img {
+        height: 260px;
+    }
+
+    .promo-banner,
+    .visit-section {
+        padding: 60px 6%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

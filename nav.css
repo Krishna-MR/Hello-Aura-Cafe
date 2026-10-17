@@ -1,6 +1,5 @@
-
 /* =====================================
-   HELLO ORA CAFE - MAIN STYLESHEET
+   HELLO AURA CAFE - MAIN STYLESHEET
 ===================================== */
 
 :root {
@@ -93,6 +92,7 @@ img {
     font-size: 14px;
     font-weight: 500;
     position: relative;
+    white-space: nowrap;
     transition: color 0.3s ease;
 }
 
