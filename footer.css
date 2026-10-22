@@ -94,3 +94,245 @@
     text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;
 }
 .whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.25); }
+
+/* ================================
+   HELLO AURA CAFE FOOTER
+================================ */
+
+.site-footer {
+    background: #183b2b;
+    color: #fffdf8;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-main {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+    display: grid;
+    grid-template-columns: 1.3fr 0.8fr 1.2fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+.footer-brand,
+.footer-column,
+.footer-cta {
+    min-width: 0;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 18px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.footer-tagline {
+    font-size: 14px;
+    line-height: 1.9;
+    color: #e0e6dd;
+    margin-bottom: 22px;
+}
+
+.footer-socials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #a8b7a7;
+    border-radius: 50%;
+    color: #fffdf8;
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: #e8cb91;
+    color: #183b2b;
+}
+
+.footer-column h3,
+.footer-cta h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column li {
+    margin-bottom: 14px;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.footer-column a {
+    color: #e0e6dd;
+    overflow-wrap: anywhere;
+    transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+    color: #e8cb91;
+}
+
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.footer-contact li > i {
+    color: #e8cb91;
+    margin-top: 5px;
+}
+
+.footer-contact li span,
+.footer-contact li a {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.footer-eyebrow {
+    display: block;
+    color: #e8cb91;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.footer-cta h3 {
+    font-size: 26px;
+    line-height: 1.4;
+}
+
+.footer-visit-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 18px;
+    background: #e8cb91;
+    color: #183b2b;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.footer-visit-button:hover {
+    background: #fffdf8;
+}
+
+.footer-bottom {
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.16);
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom p,
+.footer-bottom a {
+    color: #e0e6dd;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.footer-bottom a span {
+    color: #e8cb91;
+}
+
+/* WhatsApp floating button */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #25d366;
+    color: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    font-size: 25px;
+    text-decoration: none;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+        padding: 45px 6%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .footer-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 30px;
+        padding: 38px 24px;
+    }
+
+    .footer-logo img {
+        width: 130px;
+    }
+
+    .footer-column h3 {
+        font-size: 21px;
+        margin-bottom: 15px;
+    }
+
+    .footer-cta h3 {
+        font-size: 25px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 24px;
+        gap: 8px;
+    }
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 46px;
+        height: 46px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .footer-socials a,
+    .footer-column a,
+    .footer-visit-button {
+        transition: none;
+    }
+}
