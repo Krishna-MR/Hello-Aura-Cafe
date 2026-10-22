@@ -1,0 +1,96 @@
+/* HELLO AURA CAFE — MODERN FOOTER */
+.site-footer {
+    --footer-green: #1f3829;
+    --footer-green-light: #2b4835;
+    --footer-gold: #e8cb91;
+    --footer-cream: #f8f4eb;
+    background: var(--footer-green);
+    color: #f8f4eb;
+    padding: 64px 7% 0;
+    font-family: 'DM Sans', sans-serif;
+}
+.site-footer a { color: inherit; text-decoration: none; }
+.footer-main {
+    display: grid;
+    grid-template-columns: 1.45fr .8fr 1.15fr 1.1fr;
+    gap: 42px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding-bottom: 52px;
+}
+.footer-brand { max-width: 330px; }
+.footer-logo { display: inline-flex; align-items: center; margin-bottom: 18px; }
+.footer-logo img {
+    display: block; width: 150px; max-width: 100%; height: auto;
+    max-height: 110px; object-fit: contain;
+}
+.footer-tagline {
+    max-width: 310px; color: rgba(248,244,235,.76);
+    font-size: 14px; line-height: 1.9; margin: 0 0 24px;
+}
+.footer-socials { display: flex; align-items: center; gap: 10px; }
+.footer-socials a {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 40px; height: 40px; border: 1px solid rgba(248,244,235,.28);
+    border-radius: 50%; color: var(--footer-cream); font-size: 16px;
+    transition: background .25s ease, color .25s ease, border-color .25s ease, transform .25s ease;
+}
+.footer-socials a:hover {
+    background: var(--footer-gold); border-color: var(--footer-gold);
+    color: var(--footer-green); transform: translateY(-3px);
+}
+.footer-column h3 {
+    color: var(--footer-gold); font-family: 'Playfair Display', serif;
+    font-size: 20px; font-weight: 600; margin: 8px 0 22px;
+}
+.footer-column ul { list-style: none; display: grid; gap: 14px; padding: 0; margin: 0; }
+.footer-column li, .footer-column a { font-size: 14px; line-height: 1.7; }
+.footer-column > ul > li > a {
+    color: rgba(248,244,235,.78);
+    transition: color .2s ease, padding-left .2s ease;
+}
+.footer-column > ul > li > a:hover { color: var(--footer-gold); padding-left: 4px; }
+.footer-contact li { display: flex; align-items: flex-start; gap: 11px; color: rgba(248,244,235,.78); }
+.footer-contact li > i { color: var(--footer-gold); width: 16px; margin-top: 5px; flex: 0 0 16px; }
+.footer-contact a:hover { color: var(--footer-gold); }
+.footer-cta {
+    align-self: start; padding: 24px 22px; background: var(--footer-green-light);
+    border: 1px solid rgba(232,203,145,.2); border-radius: 10px;
+}
+.footer-eyebrow {
+    display: block; color: var(--footer-gold); font-size: 10px; font-weight: 700;
+    letter-spacing: 1.7px; line-height: 1.6; margin-bottom: 13px;
+}
+.footer-cta h3 {
+    color: #fffdf8; font-family: 'Playfair Display', serif;
+    font-size: clamp(22px, 2vw, 29px); font-weight: 500;
+    line-height: 1.35; margin: 0 0 22px;
+}
+.footer-visit-button {
+    display: inline-flex; align-items: center; justify-content: center; gap: 12px;
+    padding: 12px 16px; background: var(--footer-gold); color: var(--footer-green) !important;
+    border-radius: 4px; font-size: 13px; font-weight: 700;
+    transition: background .2s ease, transform .2s ease;
+}
+.footer-visit-button:hover { background: #f4dfb2; transform: translateY(-2px); }
+.footer-bottom {
+    max-width: 1440px; margin: 0 auto; min-height: 68px;
+    border-top: 1px solid rgba(248,244,235,.17);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 16px; padding: 18px 0;
+}
+.footer-bottom p, .footer-bottom a {
+    color: rgba(248,244,235,.68); font-size: 12px; line-height: 1.7; margin: 0;
+}
+.footer-bottom a:hover { color: var(--footer-gold); }
+.footer-bottom a span { color: var(--footer-gold); margin-left: 4px; }
+
+/* Floating WhatsApp button */
+.whatsapp-float {
+    position: fixed; right: 24px; bottom: 24px; z-index: 1100;
+    display: flex; align-items: center; justify-content: center;
+    width: 58px; height: 58px; border-radius: 50%; background: #25d366;
+    color: #fff; font-size: 29px; box-shadow: 0 8px 24px rgba(0,0,0,.2);
+    text-decoration: none; transition: transform .2s ease, box-shadow .2s ease;
+}
+.whatsapp-float:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(0,0,0,.25); }

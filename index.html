@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="order.css">
     <link rel="stylesheet" href="pages.css">
+    <!-- Footer stylesheet -->
+    <link rel="stylesheet" href="footer.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -196,7 +198,6 @@
 
     <!-- Home Page Slider -->
     <script>
-
         document.addEventListener("DOMContentLoaded", function () {
             const slides = document.querySelectorAll(".hero-slide");
             const dots = document.querySelectorAll(".slider-dot");
@@ -204,14 +205,11 @@
             const nextButton = document.querySelector(".slider-arrow.next");
             const slider = document.querySelector(".hero-slider");
 
-            if (!slides.length || !previousButton || !nextButton || !slider) {
-                return;
-            }
-
-            const SLIDE_DELAY = 5000; // 5 seconds (in milliseconds)
+            if (!slides.length) return;
 
             let currentSlide = 0;
-            let slideTimer;
+            let slideTimer = null;
+            const SLIDE_DELAY = 4000; // Change image every 4 seconds
 
             function showSlide(index) {
                 currentSlide = (index + slides.length) % slides.length;
@@ -238,19 +236,19 @@
                 slideTimer = setInterval(nextSlide, SLIDE_DELAY);
             }
 
-            function stopSlider() {
-                clearInterval(slideTimer);
+            if (nextButton) {
+                nextButton.addEventListener("click", function () {
+                    nextSlide();
+                    startSlider();
+                });
             }
 
-            nextButton.addEventListener("click", function () {
-                nextSlide();
-                startSlider();
-            });
-
-            previousButton.addEventListener("click", function () {
-                previousSlide();
-                startSlider();
-            });
+            if (previousButton) {
+                previousButton.addEventListener("click", function () {
+                    previousSlide();
+                    startSlider();
+                });
+            }
 
             dots.forEach((dot, index) => {
                 dot.addEventListener("click", function () {
@@ -259,10 +257,17 @@
                 });
             });
 
-            // Pause while the mouse is over the slider, resume when it leaves
-            slider.addEventListener("mouseenter", stopSlider);
-            slider.addEventListener("mouseleave", startSlider);
+            // Pause the automatic slider while the page is in the background.
+            document.addEventListener("visibilitychange", function () {
+                if (document.hidden) {
+                    clearInterval(slideTimer);
+                } else {
+                    startSlider();
+                }
+            });
 
+            // Start the automatic slider.
+            showSlide(0);
             startSlider();
         });
 

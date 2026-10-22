@@ -1,12 +1,22 @@
-<div class="navbar">
+
+<header class="navbar">
     <a href="index.html" class="logo" aria-label="Hello Aura Cafe home">
         <img src="Hello Aura Cafe Emblem.png" alt="Hello Aura Cafe logo">
     </a>
-    <nav class="nav-links">
+
+    <button class="nav-toggle"
+            type="button"
+            aria-label="Open navigation menu"
+            aria-controls="primary-navigation"
+            aria-expanded="false">
+        <i class="fa-solid fa-bars" aria-hidden="true"></i>
+    </button>
+
+    <nav class="nav-links" id="primary-navigation" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="menu.html">Our Menu</a>
         <a href="gallery-events.html">Gallery &amp; Events</a>
         <a href="order.html">Order Now</a>
         <a href="contact.html">Locate Us</a>
     </nav>
-</div>
+</header>
